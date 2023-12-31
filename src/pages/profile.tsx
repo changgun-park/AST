@@ -1,9 +1,9 @@
 import { View, Text } from "react-native";
 
-export function GameCard() {
+export function Profile() {
   return (
     <View>
-      <Text>Game Card</Text>
+      <Text>Profile</Text>
     </View>
   );
 }
