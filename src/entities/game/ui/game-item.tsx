@@ -43,7 +43,6 @@ const GameItem = ({ game }: { game: Game }) => {
           <View key={index} style={styles.emptySpot} />
         ))}
       </View>
-
       <View style={styles.info}>
         <View style={styles.detailItem}>
           <Icon name="tennis" size={16} color="#212121" />

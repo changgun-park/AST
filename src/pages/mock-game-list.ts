@@ -1,6 +1,6 @@
 export const mockGameList = [
   {
-    startTime: "2023-12-29T18:00:00Z",
+    startTime: "2023-12-29T18:00:00.202Z",
     endTime: "2023-12-29T20:00:00Z",
     title: "금요일 정모 조인조인~",
     type: ["복식", "랠리"],
