@@ -2,9 +2,9 @@ import React from "react";
 import { View, Text, Image, StyleSheet, ImageBackground } from "react-native";
 import { Button } from "react-native-paper";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
-import dayjs from "dayjs"; // Make sure to install dayjs
-import "dayjs/locale/ko"; // Import the Korean locale
-import advancedFormat from "dayjs/plugin/advancedFormat"; // For relative time calculation
+import dayjs from "dayjs";
+import "dayjs/locale/ko";
+import advancedFormat from "dayjs/plugin/advancedFormat";
 import type { Game } from "../types";
 
 dayjs.extend(advancedFormat);
@@ -14,7 +14,7 @@ const GameItem = ({ game }: { game: Game }) => {
   const spotsLeft = game.maxNumberPlayers - game.players.length;
 
   const startTime = dayjs(game.startDate);
-  const endTime = dayjs(game.endDate); // You would add this to your Game type
+  const endTime = dayjs(game.endDate);
   const formattedDate =
     startTime.format("MM.DD dddd HH시") + "-" + endTime.format("HH시");
 
