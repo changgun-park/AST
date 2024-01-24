@@ -1,9 +1,13 @@
-import { StyleSheet, Pressable, Text } from "react-native";
+import { StyleSheet, Pressable, Text, PressableProps } from "react-native";
 import { FAB } from "react-native-paper";
 
-export function CreateGameButton() {
+type CreateGameButtonProps = {
+  onPress: PressableProps["onPress"];
+};
+
+export function CreateGameButton({ onPress }: CreateGameButtonProps) {
   return (
-    <Pressable style={styles.createGameButton}>
+    <Pressable onPress={onPress} style={styles.createGameButton}>
       <Text style={styles.createGameText}>게임 생성</Text>
     </Pressable>
   );

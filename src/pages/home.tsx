@@ -2,8 +2,9 @@ import { View, Text, Button, ScrollView } from "react-native";
 import GameItem from "../entities/game/ui/game-item";
 import { mockGameList } from "./mock-game-list";
 import { CreateGameButton } from "../feature/create-game";
+import type { HomeProps } from "../../App";
 
-export function Home({ navigation }: { navigation: any }) {
+export function Home({ navigation }: HomeProps) {
   return (
     <View>
       <ScrollView>
@@ -19,7 +20,7 @@ export function Home({ navigation }: { navigation: any }) {
           alignItems: "center",
         }}
       >
-        <CreateGameButton />
+        <CreateGameButton onPress={() => navigation.navigate("CreateGame")} />
       </View>
     </View>
   );
