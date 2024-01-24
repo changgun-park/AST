@@ -10,8 +10,8 @@ dayjs.extend(advancedFormat);
 dayjs.locale("ko");
 
 export function GameDetail({ game }: { game: Game }) {
-  const startTime = dayjs(game.startTime);
-  const endTime = dayjs(game.endTime); // You would add this to your Game type
+  const startTime = dayjs(game.startDate);
+  const endTime = dayjs(game.endDate); // You would add this to your Game type
   const formattedDate =
     startTime.format("MM.DD dddd HH시") + "-" + endTime.format("HH시");
 

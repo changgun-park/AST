@@ -12,7 +12,7 @@ dayjs.locale("ko");
 
 const GameItem = ({ game }: { game: Game }) => {
   const spotsLeft = game.maxNumberPlayers - game.players.length;
-  const canJoin = spotsLeft > 0;
+
   const startTime = dayjs(game.startDate);
   const endTime = dayjs(game.endDate); // You would add this to your Game type
   const formattedDate =
@@ -58,7 +58,7 @@ const GameItem = ({ game }: { game: Game }) => {
         </View>
       </View>
       <View style={styles.buttonContainer}>
-        {canJoin ? (
+        {game.status === "모집중" ? (
           <Button
             mode="outlined"
             color="#2196F3"

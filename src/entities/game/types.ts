@@ -5,7 +5,7 @@ export type Game = {
   title: string;
   types: GameType[]; // 서버는 string..?
   sex: GameSex;
-  skillLevels: GameSkillLevel[]; // 서버는 string...?
+  skillLevels: number[]; // 서버는 string...?
   status: GameStatus;
   maxNumberPlayers: number;
   court: {
@@ -22,7 +22,6 @@ export type Game = {
   }[];
 };
 
-export type GameType = "Rally" | "Singles" | "Doubles";
-export type GameSex = "Any" | "Male" | "Female";
-export type GameSkillLevel = 1 | 2 | 3 | 4 | 5;
-export type GameStatus = "OPEN" | "MATCHED" | "FINISHED";
+export type GameType = "랠리" | "단식" | "복식";
+export type GameSex = "무관" | "남자" | "여자";
+export type GameStatus = "모집중" | "마감" | "완료";
