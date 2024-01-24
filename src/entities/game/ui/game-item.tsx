@@ -11,10 +11,10 @@ dayjs.extend(advancedFormat);
 dayjs.locale("ko");
 
 const GameItem = ({ game }: { game: Game }) => {
-  const spotsLeft = game.maxParticipants - game.participants.length;
+  const spotsLeft = game.maxNumberPlayers - game.players.length;
   const canJoin = spotsLeft > 0;
-  const startTime = dayjs(game.startTime);
-  const endTime = dayjs(game.endTime); // You would add this to your Game type
+  const startTime = dayjs(game.startDate);
+  const endTime = dayjs(game.endDate); // You would add this to your Game type
   const formattedDate =
     startTime.format("MM.DD dddd HH시") + "-" + endTime.format("HH시");
 
@@ -32,10 +32,10 @@ const GameItem = ({ game }: { game: Game }) => {
         </ImageBackground>
       </View>
       <View style={styles.participants}>
-        {game.participants.map((participant, index) => (
+        {game.players.map((player, index) => (
           <Image
             key={index}
-            source={{ uri: participant }}
+            source={{ uri: player.profileImgUrl }}
             style={styles.avatar}
           />
         ))}
@@ -46,7 +46,7 @@ const GameItem = ({ game }: { game: Game }) => {
       <View style={styles.info}>
         <View style={styles.detailItem}>
           <Icon name="tennis" size={16} color="#212121" />
-          <Text style={styles.detailText}>{game.type.join(", ")}</Text>
+          <Text style={styles.detailText}>{game.types.join(", ")}</Text>
         </View>
         <View style={styles.detailItem}>
           <Icon name="account-group" size={16} color="#212121" />
@@ -57,7 +57,6 @@ const GameItem = ({ game }: { game: Game }) => {
           <Text style={styles.detailText}>{game.court.name}</Text>
         </View>
       </View>
-
       <View style={styles.buttonContainer}>
         {canJoin ? (
           <Button
