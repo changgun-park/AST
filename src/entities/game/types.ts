@@ -5,7 +5,7 @@ export type Game = {
   title: string;
   types: GameType[]; // 서버는 string..?
   sex: GameSex;
-  skillLevels: number[]; // 서버는 string...?
+  skillLevel: number;
   status: GameStatus;
   maxNumberPlayers: number;
   court: {

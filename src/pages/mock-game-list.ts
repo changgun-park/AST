@@ -8,7 +8,7 @@ export const mockGameList: Game[] = [
     title: "금요일 정모 조인조인~",
     types: ["랠리", "복식"],
     sex: "무관",
-    skillLevels: [1, 2, 3],
+    skillLevel: 1.5,
     status: "모집중",
     maxNumberPlayers: 4,
     court: {
@@ -45,7 +45,7 @@ export const mockGameList: Game[] = [
     title: "금요일 정모 조인조인~",
     types: ["랠리", "복식"],
     sex: "무관",
-    skillLevels: [1, 2, 3],
+    skillLevel: 2,
     status: "모집중",
     maxNumberPlayers: 4,
     court: {
@@ -82,7 +82,7 @@ export const mockGameList: Game[] = [
     title: "금요일 정모 조인조인~",
     types: ["랠리", "복식"],
     sex: "무관",
-    skillLevels: [1, 2, 3],
+    skillLevel: 4,
     status: "모집중",
     maxNumberPlayers: 4,
     court: {

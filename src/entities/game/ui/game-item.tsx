@@ -50,7 +50,7 @@ const GameItem = ({ game }: { game: Game }) => {
         </View>
         <View style={styles.detailItem}>
           <Icon name="account-group" size={16} color="#212121" />
-          <Text style={styles.detailText}>{game.skillLevels.join(", ")}</Text>
+          <Text style={styles.detailText}>NTRP: {game.skillLevel}</Text>
         </View>
         <View style={styles.detailItem}>
           <Icon name="map-marker" size={16} color="#212121" />
